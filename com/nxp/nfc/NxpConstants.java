@@ -39,6 +39,16 @@ public final class NxpConstants {
     public static final int UICC_ID_TYPE = 2;
 
     /**
+     * UICC2 ID to be able to select it as the default Secure Element
+     */
+    public static final String UICC2_ID = "com.nxp.uicc2.ID";
+
+    /**
+     *@hide
+     */
+    public static final int UICC2_ID_TYPE = 4;
+
+    /**
      * eSE ID to be able to select it as the default Secure Element
      */
     public static final String SMART_MX_ID = "com.nxp.smart_mx.ID";
@@ -60,7 +70,7 @@ public final class NxpConstants {
     /**
      *@hide
      */
-    public static final int ALL_SE_ID_TYPE = 3;
+    public static final int ALL_SE_ID_TYPE = 7;
 
     public static final String HOST_ID = "com.nxp.host.ID";
 
@@ -172,11 +182,12 @@ public final class NxpConstants {
     public static final String ACTION_ROUTING_TABLE_FULL = "nfc.intent.action.AID_ROUTING_TABLE_FULL";
 
     public static final String ACTION_MULTI_EVT_TRANSACTION = "com.gsma.services.nfc.action.TRANSACTION_EVENT";
+    public static final String ACTION_CHECK_CERT = "org.simalliance.openmobileapi.service.ACTION_CHECK_CERT";
     public static final String ACTION_CHECK_X509 = "org.simalliance.openmobileapi.service.ACTION_CHECK_X509";
     public static final String SET_PACKAGE_NAME = "org.simalliance.openmobileapi.service";
     public static final String EXTRA_SE_NAME = "org.simalliance.openmobileapi.service.EXTRA_SE_NAME";
-    public static final String EXTRA_PKG = "org.simalliance.openmobileapi.service.extra.EXTRA_PKG";
-    public static final String EXTRA_RESULT = "org.simalliance.openmobileapi.service.extra.EXTRA_RESULT";
+    public static final String EXTRA_PKG = "org.simalliance.openmobileapi.service.EXTRA_PKG";
+    public static final String EXTRA_RESULT = "org.simalliance.openmobileapi.service.EXTRA_RESULT";
 
     public static final String ACTION_CHECK_X509_RESULT = "org.simalliance.openmobileapi.service.ACTION_CHECK_X509_RESULT";
     public static final String PERMISSIONS_TRANSACTION_EVENT = "com.gsma.services.nfc.permission.TRANSACTION_EVENT";
@@ -184,6 +195,15 @@ public final class NxpConstants {
     public static final String EXTRA_GSMA_DATA = "com.gsma.services.nfc.extra.DATA";
     public static final String ACTION_GSMA_ENABLE_NFC = "com.gsma.services.nfc.action.ENABLE_NFC";
     public static final String ACTION_GSMA_ENABLE_SET_FLAG = "com.gsma.services.nfc.action.ENABLE_NFC_SET_FALG";
+
+    /**
+     * Indicates the states of an APDU service.
+     * Service is enabled only when the commit to routing table is successful
+     */
+    public static final int SERVICE_STATE_DISABLED  = 0;
+    public static final int SERVICE_STATE_ENABLED   = 1;
+    public static final int SERVICE_STATE_ENABLING  = 2;
+    public static final int SERVICE_STATE_DISABLING = 3;
 
 
 }

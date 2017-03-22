@@ -47,6 +47,9 @@ interface INxpNfcAdapter
     int getSeInterface(int type);
     byte[]  getFWVersion();
     Map getServicesAidCacheSize(int userId, String category);
+    int getMaxAidRoutingTableSize();
+    int getCommittedAidRoutingTableSize();
     int[] getActiveSecureElementList(String pkg);
     int updateServiceState(int userId , in Map serviceState);
+    int setConfig(String configs , String pkg);
 }
